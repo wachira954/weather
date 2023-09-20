@@ -18,11 +18,13 @@ body {
 p {
   font-size: 1.6rem;
   color: #fff;
+  
 }
 
 h1 {
   font-size: 6rem;
   color: #fff;
+  align-items: center;
 }
 
 .app {
@@ -31,6 +33,13 @@ h1 {
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
+}
+
+.app h1 {
+  /* font-size: 6rem; */
+  /* color: #fff; */
+  text-align: center;
+  /* margin-top: 20px;  */
 }
 
 .app:before {
@@ -46,7 +55,7 @@ h1 {
 
 .app .search {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .app input {
@@ -56,16 +65,40 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.1);
   color: #f8f8f8;
+  
 }
 
 .app input::placeholder {
   color: #f8f8f8;
 }
+.app button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 25px;
+  background-color: #007bff9c; 
+  
+}
+.app button:hover {
+  background-color: #0056b3; 
+  color: #fff;
+}
+
+.app button:disabled {
+  background-color: #ccc; 
+  color: #fff;
+  cursor: not-allowed;
+}
+
 
 .container {
-  max-width: 700px;
-  height: 700px;
-  margin: auto;
+  max-width: 500px;
+  height: 600px;
+  margin: 0 auto;
   padding: 0 1rem;
   position: relative;
   top: 10%;
@@ -117,6 +150,11 @@ h1 {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+}
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .unit-controls button.active {

@@ -1,15 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import '../node_modules/bulma/css/bulma.min.css';
-import store from './store/store';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import './index.css';
+import store from './redux/store';
 
-ReactDOM.render(
+
+
+const container = document.getElementById('root')!;
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
+
+reportWebVitals();
